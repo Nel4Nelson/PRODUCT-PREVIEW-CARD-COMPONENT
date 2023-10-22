@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Typography */
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  color: hsl(228, 12%, 48%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0.8rem 0 1rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.488rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.728rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+/* My Styles */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  max-width: 21rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+picture img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.detail-container {
+  padding: 1.2rem;
+}
+
+.detail-container h1:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.detail-container h2 {
+  color: hsl(212, 21%, 14%);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.price h2 {
+  color: hsl(158, 36%, 37%);
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  padding-block: 0.8rem;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn-dark-cyan {
+  background-color: hsl(158, 36%, 37%);
+}
+
+.btn:hover {
+  background-color: hsl(155.29, 17.89%, 18.63%);
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  h2 {
+    margin: 1.2rem 0 1.5rem;
+  }
+
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 35rem;
+  }
+
+  picture img {
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+}
